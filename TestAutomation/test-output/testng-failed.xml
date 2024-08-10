@@ -3,9 +3,18 @@
 <suite name="Failed suite [CCSGReg1]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="RatesTesting(failed)">
     <classes>
+      <class name="loginModule.GenericLogin">
+        <methods>
+          <include name="testCaseData"/>
+          <include name="LoginData"/>
+          <include name="setup"/>
+          <include name="setUpWebDriver"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- loginModule.GenericLogin -->
       <class name="PlanTestCases.CreateNewPlan">
         <methods>
-          <include name="createnewPlan" invocation-numbers="0"/>
+          <include name="createnewPlan"/>
           <include name="setup"/>
           <include name="setUpWebDriver"/>
           <include name="plantestCaseData"/>

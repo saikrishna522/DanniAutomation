@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-17T11:12:31 IST" name="CCSGReg1" finished-at="2024-07-17T11:13:38 IST" duration-ms="66564">
+  <suite started-at="2024-08-10T22:09:16 IST" name="CCSGReg1" finished-at="2024-08-10T22:10:05 IST" duration-ms="48932">
     <groups>
     </groups>
-    <test started-at="2024-07-17T11:12:31 IST" name="RatesTesting" finished-at="2024-07-17T11:13:38 IST" duration-ms="66564">
+    <test started-at="2024-08-10T22:09:16 IST" name="RatesTesting" finished-at="2024-08-10T22:10:05 IST" duration-ms="48932">
       <class name="PlanTestCases.CreateNewPlan">
-        <test-method is-config="true" signature="plantestCaseData(org.testng.ITestContext)[pri:0, instance:PlanTestCases.CreateNewPlan@73db4768]" started-at="2024-07-17T11:12:56 IST" name="plantestCaseData" finished-at="2024-07-17T11:12:56 IST" duration-ms="149" status="PASS">
+        <test-method is-config="true" signature="plantestCaseData(org.testng.ITestContext)[pri:0, instance:PlanTestCases.CreateNewPlan@4c37b5b]" started-at="2024-08-10T22:09:31 IST" name="plantestCaseData" finished-at="2024-08-10T22:09:31 IST" duration-ms="253" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@54d60fa1]]>
+                <![CDATA[org.testng.TestRunner@1071ae7c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- plantestCaseData -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:PlanTestCases.CreateNewPlan@73db4768]" started-at="2024-07-17T11:12:56 IST" name="setup" finished-at="2024-07-17T11:12:56 IST" duration-ms="66" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:PlanTestCases.CreateNewPlan@4c37b5b]" started-at="2024-08-10T22:09:31 IST" name="setup" finished-at="2024-08-10T22:09:31 IST" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createnewPlan(java.util.Map)[pri:1, instance:PlanTestCases.CreateNewPlan@73db4768]" started-at="2024-07-17T11:12:56 IST" name="createnewPlan" data-provider="DataProvider" finished-at="2024-07-17T11:13:38 IST" duration-ms="41541" status="PASS">
+        <test-method signature="createnewPlan(java.util.Map)[pri:1, instance:PlanTestCases.CreateNewPlan@4c37b5b]" started-at="2024-08-10T22:09:32 IST" name="createnewPlan" data-provider="DataProvider" finished-at="2024-08-10T22:10:05 IST" duration-ms="33470" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{sClaimsLimit=10000, sclass=ALL, sMWMileage=25000 kms, sfueltype=Diesel, Disbursements=Disbursements:1, sMWSD=17/07/2024, sModel=CLS350, Swarranty=Warranty:1, sturbo=No, sVIN=ERT1234562406A001, Scustomer=Customer:1, sMileage=0, Warranty=true, sTransmission=Automatic, TestCaseID=1, sMWTerm=24, Smart=true, sEngineCC=1400, sSellingDealer=QATTS_SD_GenericFixed, sPolicySoldDate=17/07/2024, sMake=Mercedes-Benz, sVSoldDate=17/07/2024, sdrivetype=4x2, sSalesPerson=QATTS_SP_GenFixed, Ssmart=Smart:1}]]>
+                <![CDATA[{sClaimsLimit=10000, sclass=ALL, sMWMileage=25000 kms, sfueltype=Diesel, Disbursements=Disbursements:1, sMWSD=10/08/2024, sModel=CLS350, Swarranty=Warranty:1, sturbo=No, sVIN=ERT1234562406A001, Scustomer=Customer:1, sMileage=0, Warranty=true, sTransmission=Automatic, TestCaseID=1, sMWTerm=24, Smart=true, sEngineCC=1400, sSellingDealer=QATTS_SD_GenericFixed, sPolicySoldDate=10/08/2024, sMake=Mercedes-Benz, sVSoldDate=10/08/2024, sdrivetype=4x2, sSalesPerson=QATTS_SP_GenFixed, Ssmart=Smart:1}]]>
               </value>
             </param>
           </params>
@@ -35,26 +35,26 @@
         </test-method> <!-- createnewPlan -->
       </class> <!-- PlanTestCases.CreateNewPlan -->
       <class name="loginModule.GenericLogin">
-        <test-method is-config="true" signature="setUpWebDriver()[pri:0, instance:loginModule.GenericLogin@4f2c9ba6]" started-at="2024-07-17T11:12:24 IST" name="setUpWebDriver" finished-at="2024-07-17T11:12:31 IST" duration-ms="7525" status="PASS">
+        <test-method is-config="true" signature="setUpWebDriver()[pri:0, instance:loginModule.GenericLogin@1e1d3956]" started-at="2024-08-10T22:09:07 IST" name="setUpWebDriver" finished-at="2024-08-10T22:09:16 IST" duration-ms="9005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpWebDriver -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:loginModule.GenericLogin@4f2c9ba6]" started-at="2024-07-17T11:12:32 IST" name="setup" finished-at="2024-07-17T11:12:32 IST" duration-ms="74" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:loginModule.GenericLogin@1e1d3956]" started-at="2024-08-10T22:09:16 IST" name="setup" finished-at="2024-08-10T22:09:16 IST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="testCaseData(org.testng.ITestContext)[pri:0, instance:loginModule.GenericLogin@4f2c9ba6]" started-at="2024-07-17T11:12:32 IST" name="testCaseData" finished-at="2024-07-17T11:12:34 IST" duration-ms="2178" status="PASS">
+        <test-method is-config="true" signature="testCaseData(org.testng.ITestContext)[pri:0, instance:loginModule.GenericLogin@1e1d3956]" started-at="2024-08-10T22:09:16 IST" name="testCaseData" finished-at="2024-08-10T22:09:18 IST" duration-ms="1765" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@54d60fa1]]>
+                <![CDATA[org.testng.TestRunner@1071ae7c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseData -->
-        <test-method signature="LoginData(java.util.Map)[pri:1, instance:loginModule.GenericLogin@4f2c9ba6]" started-at="2024-07-17T11:12:34 IST" name="LoginData" data-provider="DataProvider" finished-at="2024-07-17T11:12:56 IST" duration-ms="21787" status="PASS">
+        <test-method signature="LoginData(java.util.Map)[pri:1, instance:loginModule.GenericLogin@1e1d3956]" started-at="2024-08-10T22:09:18 IST" name="LoginData" data-provider="DataProvider" finished-at="2024-08-10T22:09:31 IST" duration-ms="12443" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginData -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:loginModule.GenericLogin@4f2c9ba6]" started-at="2024-07-17T11:13:38 IST" name="logout" finished-at="2024-07-17T11:13:38 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginModule.GenericLogin@1e1d3956]" started-at="2024-08-10T22:10:05 IST" name="logout" finished-at="2024-08-10T22:10:05 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->

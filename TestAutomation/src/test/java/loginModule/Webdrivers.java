@@ -3,6 +3,7 @@ package loginModule;
 
 
 import java.time.Duration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -61,9 +62,9 @@ public class Webdrivers {
 	}
 
 	public void chromeBrowser() {
-		System.setProperty("webdriver.chrome.driver", ExcelConstants.ChromeDriverPath);
+		WebDriverManager.chromedriver().setup();
+		 driver = new ChromeDriver();
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
