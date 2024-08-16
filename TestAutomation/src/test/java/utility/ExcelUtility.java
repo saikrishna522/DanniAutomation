@@ -48,9 +48,7 @@ import loginModule.LoginPage;
 
 	public static void setExcelFile(String Path,String SheetName) throws Exception {
 
-		try (InputStream ExcelFile = new URL(Path).openStream()) {
-
-				
+		try (InputStream ExcelFile = new URL(Path).openStream()) {				
 
 				ExcelWBook = new XSSFWorkbook(ExcelFile);
 
