@@ -64,6 +64,11 @@
   <version>2.14.1</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
+  	<dependency>
+  		<groupId>DanniAutomation</groupId>
+  		<artifactId>DanniAutomation</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
   
   <build>

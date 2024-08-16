@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -46,13 +48,9 @@ import loginModule.LoginPage;
 
 	public static void setExcelFile(String Path,String SheetName) throws Exception {
 
-		   try {
+		try (InputStream ExcelFile = new URL(Path).openStream()) {
 
-				// Open the Excel file
-
-				FileInputStream ExcelFile = new FileInputStream(Path);
-
-				// Access the required test data sheet
+				
 
 				ExcelWBook = new XSSFWorkbook(ExcelFile);
 
@@ -69,11 +67,7 @@ import loginModule.LoginPage;
 	public static Object[][] getTableArray(String filePath, String sheetName, String sTestCaseName) throws Exception {
 		 Object[][] tabArray = null;
 
-		    try {
-		        FileInputStream excelFile = new FileInputStream(filePath);
-		        ExcelWBook = new XSSFWorkbook(excelFile);
-		        ExcelWSheet = ExcelWBook.getSheet(sheetName);
-
+		 setExcelFile(filePath,sheetName);
 		        XSSFRow headerRow = ExcelWSheet.getRow(0);
 		        int totalCols = headerRow.getLastCellNum();
 		        
@@ -114,25 +108,14 @@ import loginModule.LoginPage;
 
 		            tabArray[ci] = new Object[]{rowData};
 		        }
-		    } catch (FileNotFoundException e) {
-		        System.out.println("Could not read the Excel sheet");
-		        e.printStackTrace();
-		    } catch (IOException e) {
-		        System.out.println("Could not read the Excel sheet");
-		        e.printStackTrace();
+		        return tabArray;
 		    }
-	    	
-		    return tabArray;
-	
-    }
+	 
 	
 	public static  Object[][] getTableData(String filePath, String sheetName, int startRow, int endRow) throws Exception {
 		  Object[][] tabArray = null;
 
-		    try {
-		        FileInputStream excelFile = new FileInputStream(filePath);
-		        ExcelWBook = new XSSFWorkbook(excelFile);
-		        ExcelWSheet = ExcelWBook.getSheet(sheetName);
+		  setExcelFile(filePath,sheetName);
 
 		        XSSFRow headerRow = ExcelWSheet.getRow(0);
 		        int totalCols = headerRow.getLastCellNum();
@@ -156,14 +139,7 @@ import loginModule.LoginPage;
 		            tabArray[i][0] = rowData;
 		        }
 
-		    } catch (FileNotFoundException e) {
-		        System.out.println("Could not read the Excel sheet");
-		        e.printStackTrace();
-		    } catch (IOException e) {
-		        System.out.println("Could not read the Excel sheet");
-		        e.printStackTrace();
-		    }
-
+		   
 		    return tabArray;
 		}
 	public static String getCellData(int rowNum, String columnName) throws Exception {

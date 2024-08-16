@@ -5,21 +5,13 @@
     <classes>
       <class name="loginModule.GenericLogin">
         <methods>
-          <include name="testCaseData"/>
           <include name="LoginData"/>
+          <include name="testCaseData"/>
           <include name="setup"/>
           <include name="setUpWebDriver"/>
           <include name="logout"/>
         </methods>
       </class> <!-- loginModule.GenericLogin -->
-      <class name="PlanTestCases.CreateNewPlan">
-        <methods>
-          <include name="createnewPlan"/>
-          <include name="setup"/>
-          <include name="setUpWebDriver"/>
-          <include name="plantestCaseData"/>
-        </methods>
-      </class> <!-- PlanTestCases.CreateNewPlan -->
     </classes>
   </test> <!-- RatesTesting(failed) -->
 </suite> <!-- Failed suite [CCSGReg1] -->
