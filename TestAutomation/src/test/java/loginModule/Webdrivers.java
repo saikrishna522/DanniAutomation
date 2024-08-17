@@ -1,7 +1,5 @@
 package loginModule;
 
-
-
 import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,7 +19,6 @@ import org.testng.annotations.BeforeSuite;
 
 import org.testng.asserts.SoftAssert;
 
-
 //import testCases.NewTest;
 import utility.ExcelConstants;
 
@@ -29,57 +26,49 @@ public class Webdrivers {
 	public static WebDriver driver;
 	protected static final Logger logger = LogManager.getLogger(Webdrivers.class);
 	SoftAssert softassert = new SoftAssert();
-	 
+
 	@BeforeSuite
 	public void setUpWebDriver() throws Exception {
 		Configurator.initialize(null, "log4j2.xml");
 		if (ExcelConstants.Browser.equals("Edge"))
 			edgeBrowser();
 		else {
-			
+
 			chromeBrowser();
 		}
-	}
-	
-	
-	  
-	  public void setup() {
-		    Configurator.initialize(null, "log4j2.xml");
-		    Configurator.setLevel(LogManager.getRootLogger().getName(), Level.INFO); // Change Level.INFO here
-		}
-	
-	public void edgeBrowser() {
-		System.setProperty("webdriver.edge.driver", ExcelConstants.EdgeDriverPath);
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		driver = new EdgeDriver();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.manage().window().maximize();
-		driver.get(ExcelConstants.URL);
-		logger.info("Opened Edge Browser");
 		waitForTitle(ExcelConstants.Title);
-		String expectedTitle = ExcelConstants.Title;
-		String originalTitle = driver.getTitle();
-		Assert.assertEquals(originalTitle, expectedTitle);
+	}
+
+	public void setup() {
+		Configurator.initialize(null, "log4j2.xml");
+		Configurator.setLevel(LogManager.getRootLogger().getName(), Level.INFO); // Change Level.INFO here
+	}
+
+	public void edgeBrowser() {
+		logger.info("Opening Edge browser setting driver");
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
+		logger.info("Opened Edge Browser");
 	}
 
 	public void chromeBrowser() {
+		logger.info("Opening Chrome browser setting driver");
 		WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		driver = new ChromeDriver();
+		logger.info("Opened Chrome Browser");
+
+	}
+
+	private void waitForTitle(String expectedTitle) {
+		logger.info("Seeting Browser Capabilities");
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(ExcelConstants.URL);
-		logger.info("Opened Chrome Browser");
-		waitForTitle(ExcelConstants.Title);
-		String expectedTitle = ExcelConstants.Title;
+		wait.until(ExpectedConditions.titleIs(expectedTitle));
 		String originalTitle = driver.getTitle();
+		logger.info("Opened website "+originalTitle);
 		softassert.assertEquals(originalTitle, expectedTitle, "Title of the Website doesn't match...");
 	}
-	private void waitForTitle(String expectedTitle) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.titleIs(expectedTitle));
-        String originalTitle = driver.getTitle();
-        softassert.assertEquals(originalTitle, expectedTitle, "Title of the Website doesn't match...");
-    }
 }

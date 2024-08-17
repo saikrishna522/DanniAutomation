@@ -39,16 +39,15 @@ public class GenericLogin extends Webdrivers {
 
     @AfterSuite
     public void logout() {
-    	//LoginClass.Logout();
+    	LoginClass.Logout();
     }
 
     @BeforeClass
-    public void testCaseData(ITestContext context) throws Exception {
+    public void testCaseData() throws Exception {
         String testCaseName = "Login";
         testCaseData = ExcelUtility.getTableArray(ExcelConstants.File_Path, "TestCases", testCaseName);
         for (Object[] testData : testCaseData) {
-            Map<String, String> testCaseMap = (Map<String, String>) testData[0];
-            
+            Map<String, String> testCaseMap = (Map<String, String>) testData[0];            
             System.out.println("testCaseData: " + testCaseMap);
             testScenario = testCaseMap.get("TestScenario");
             System.out.println("TestScenario: " + testScenario);

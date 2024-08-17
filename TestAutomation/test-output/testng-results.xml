@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-16T21:25:49 IST" name="CCSGReg1" finished-at="2024-08-16T21:26:11 IST" duration-ms="21429">
+  <suite started-at="2024-08-17T19:36:47 IST" name="CCSGReg1" finished-at="2024-08-17T19:37:15 IST" duration-ms="28057">
     <groups>
     </groups>
-    <test started-at="2024-08-16T21:25:49 IST" name="RatesTesting" finished-at="2024-08-16T21:26:11 IST" duration-ms="21429">
+    <test started-at="2024-08-17T19:36:47 IST" name="RatesTesting" finished-at="2024-08-17T19:37:15 IST" duration-ms="28057">
       <class name="loginModule.GenericLogin">
-        <test-method is-config="true" signature="setUpWebDriver()[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-16T21:25:42 IST" name="setUpWebDriver" finished-at="2024-08-16T21:25:49 IST" duration-ms="7394" status="PASS">
+        <test-method is-config="true" signature="setUpWebDriver()[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-17T19:36:35 IST" name="setUpWebDriver" finished-at="2024-08-17T19:36:47 IST" duration-ms="12219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpWebDriver -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-16T21:25:49 IST" name="setup" finished-at="2024-08-16T21:25:49 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-17T19:36:47 IST" name="setup" finished-at="2024-08-17T19:36:47 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="testCaseData(org.testng.ITestContext)[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-16T21:25:49 IST" name="testCaseData" finished-at="2024-08-16T21:25:53 IST" duration-ms="3138" status="PASS">
+        <test-method is-config="true" signature="testCaseData(org.testng.ITestContext)[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-17T19:36:47 IST" name="testCaseData" finished-at="2024-08-17T19:36:51 IST" duration-ms="3523" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3005623b]]>
+                <![CDATA[org.testng.TestRunner@4243341e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseData -->
-        <test-method signature="LoginData(java.util.Map)[pri:1, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-16T21:25:53 IST" name="LoginData" data-provider="DataProvider" finished-at="2024-08-16T21:26:11 IST" duration-ms="17614" status="PASS">
+        <test-method signature="LoginData(java.util.Map)[pri:1, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-17T19:36:51 IST" name="LoginData" data-provider="DataProvider" finished-at="2024-08-17T19:37:15 IST" duration-ms="23731" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginData -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-16T21:26:11 IST" name="logout" finished-at="2024-08-16T21:26:11 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginModule.GenericLogin@f79a760]" started-at="2024-08-17T19:37:15 IST" name="logout" finished-at="2024-08-17T19:37:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
